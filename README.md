@@ -1,3 +1,4 @@
+[![TestRail v4.1](https://img.shields.io/badge/TestRail%20API-v2-green.svg)](http://docs.gurock.com/testrail-api2/start)
 # Jasmine2TestRail
 
 Module to use [Protractor](https://www.protractortest.org) in conjunction with [TestRail](http://www.gurock.com/testrail/).
@@ -69,9 +70,13 @@ In order to use TestRail API, it needs to be enabled by an administrator in your
 <br> Also if you want to use API authentication instead of your password, enable session authentication for API <br> in the TestRail Site Settings, and add an API key in your User settings.
 
 ## Authors
+| [<img src="https://avatars.githubusercontent.com/Slobo989" width="100px;"/><br /><sub><b>Slobodan Dušanić</b></sub>](https://github.com/Slobo989)<br /> | [<img src="https://avatars.githubusercontent.com/<username>" width="100px;"/><br /><sub><b>Željko Simić</b></sub>](https://www.npmjs.com/~thezex)<br/> |
+|---|---|
 
-* **Slobodan Dušanić** - *Test Developer*
-* **Željko Simić** - *Test Developer*
+## Special thanks
+
+[<img src="https://avatars.githubusercontent.com/markoarsenal" width="100px;"/>
+<br /><sub><b>Marko Rajević</b></sub>](https://github.com/markorajevic)<br />
 
 ## License
 
