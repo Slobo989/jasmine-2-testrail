@@ -21,7 +21,6 @@ const reporter = new Reporter({
 });
 
 exports.config = {
-
   onPrepare: () => {
     jasmine.getEnv().addReporter(reporter);
   },
