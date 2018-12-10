@@ -5,6 +5,11 @@ Module to use [Protractor](https://www.protractortest.org) in conjunction with [
 * It can automatically create new test run on TestRail.
 * It can automatically push test results to TestRail - after they've been run.
 
+## Install
+```code
+npm i jasmine-2-testrail
+```
+
 ## Example - Protractor **conf.js**
 The Reporter should be imported and declared outside of the config and included in the onPrepare section.
 <br>The "createRun()" method is called for creating run in the afterLaunch section of the config file,<br>with the first parameter being your corresponding TestRail project ID
