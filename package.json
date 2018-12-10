@@ -1,0 +1,65 @@
+{
+  "_from": "jasmine-2-testrail",
+  "_id": "jasmine-2-testrail@1.0.2",
+  "_inBundle": false,
+  "_integrity": "sha512-QAwhokckU1pS8EeFxfchaSvcb5k8M50SRtzRahpAKZWamSGuW/S2/oxt1+qJ/aFotVxwjaB7P+Bsvx14zY6tJA==",
+  "_location": "/jasmine-2-testrail",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "jasmine-2-testrail",
+    "name": "jasmine-2-testrail",
+    "escapedName": "jasmine-2-testrail",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/jasmine-2-testrail/-/jasmine-2-testrail-1.0.2.tgz",
+  "_shasum": "dbb7dde2d1cc1bd0001d181b4c7a09395853e2b1",
+  "_spec": "jasmine-2-testrail",
+  "_where": "D:\\New folder",
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Slobodan Dusanic"
+    },
+    {
+      "name": "Zeljko Simic"
+    }
+  ],
+  "dependencies": {
+    "jasmine": ">=3.0.0",
+    "jasmine-console-reporter": "^3.1.0",
+    "testrail": "github:dlenroc/node-testrail-api"
+  },
+  "deprecated": false,
+  "description": "Jasmine based reporter for creating new run and sending results to TestRail",
+  "files": [
+    "jasmine-2-testrail.js",
+    "testrail-credentials.json",
+    "LICENSE"
+  ],
+  "keywords": [
+    "testrail",
+    "jasmine",
+    "console",
+    "reporter",
+    "report",
+    "terminal",
+    "test",
+    "results",
+    "protractor"
+  ],
+  "license": "MIT",
+  "main": "jasmine-2-testrail.js",
+  "name": "jasmine-2-testrail",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.5"
+}
