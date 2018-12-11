@@ -3,8 +3,8 @@
 
 Module to use [Protractor](https://www.protractortest.org) in conjunction with [TestRail](http://www.gurock.com/testrail/).
 
-* It can automatically create new test run on TestRail.
-* It can automatically push test results to TestRail - after they've been run.
+* It can automatically create a new test run on TestRail.
+* It can automatically send test results to TestRail - after they've been run.
 
 ## Install
 ```code
@@ -12,8 +12,9 @@ npm i jasmine-2-testrail
 ```
 
 ## Example - Protractor **conf.js**
-The Reporter should be imported and declared outside of the config and included in the onPrepare section.
-<br>The "createRun()" method is called for creating run in the afterLaunch section of the config file,<br>with the first parameter being your corresponding TestRail project ID
+The Reporter must be imported and declared outside of the config 
+<br>and included in the **onPrepare** section.
+<br>The *createRun()* method is called for creating run in the **afterLaunch** section of the config file,<br>with the first parameter being your corresponding TestRail project ID
 <br>and the second parameter being the suite ID in which you want to put the newly created run.
 ```javascript
 const Reporter = require('jasmine-2-testrail')
@@ -35,8 +36,9 @@ exports.config = {
 }
 
 ```
+
 ## Example - tests
-You should put the Case ID from TestRail at the start of each IT description, <br>and separate it from the test name by a colon - ":".
+The Case ID from TestRail must be added to the start of each *it()* description, <br>and separated from the test name by a colon - ":".
 ```javascript
 describe('Login Page', () => {
   // "1:" this is Case ID from Test Rail
@@ -53,9 +55,12 @@ describe('Login Page', () => {
   })
 })
 ```
+**Note:** The Case ID is a unique and permanent ID of every test case (e.g. C125),
+<br>and shoudn't be confused with a Test Case ID, which is assigned to a test case<br> when a new run is created (e.g. T325).
+
 ## Example - **testrail-credentials.json**
-This file needs to be created in the projects root directory.
-<br> It should contain the URL of your TestRail, username (email address) and password (or API key).
+This file needs to be created in the root directory of the project.
+<br> It must contain the URL of your TestRail, username (email address) and password (or API key).
 <br> This file needs to have all 3 parameters correctly filled.
 ```javascript
 {
@@ -65,11 +70,14 @@ This file needs to be created in the projects root directory.
 }
 ```
 ## Enable TestRail API
-In order to use TestRail API, it needs to be enabled by an administrator in your own TestRail Site Settings
-<br> Also if you want to use API authentication instead of your password, enable session authentication for API <br> in the TestRail Site Settings, and add an API key in your User settings.
+In order to use TestRail API, it needs to be enabled by an administrator
+<br>in your own TestRail Site Settings.
+Also if you want to use API authentication instead of your password,
+<br>enable session authentication for API  in the TestRail Site Settings,
+<br>and add an API key in your User settings *(This is recommended)*.
 
 ## Authors
-| [<img src="https://avatars.githubusercontent.com/Slobo989" width="100px;"/><br /><sub><b>Slobodan Dušanić</b></sub>](https://github.com/Slobo989)<br /> | [<img src="https://avatars.githubusercontent.com/<username>" width="100px;"/><br /><sub><b>Željko Simić</b></sub>](https://www.npmjs.com/~thezex)<br/> |
+| [<img src="https://avatars.githubusercontent.com/Slobo989" width="100px;"/><br /><sub><b>Slobodan Dušanić</b></sub>](https://github.com/Slobo989)| [<img src="https://avatars.githubusercontent.com/zeljkosimic95" width="100px;"/><br /><sub><b>Željko Simić</b></sub>](https://www.github.com/zeljkosimic95) |
 |---|---|
 
 ## Special thanks
