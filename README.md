@@ -83,7 +83,7 @@ Also if you want to use API authentication instead of your password,
 ## Special thanks
 
 [<img src="https://avatars.githubusercontent.com/markoarsenal" width="100px;"/>
-<br /><sub><b>Marko Rajević</b></sub>](https://github.com/markorajevic)<br />
+<br /><sub><b>Marko Rajević</b></sub>](https://github.com/markoarsenal)<br />
 
 ## License
 
