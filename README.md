@@ -12,7 +12,7 @@ npm i jasmine-2-testrail
 ```
 
 ## Example - Protractor **conf.js**
-The Reporter must be imported and declared outside of the config 
+The Reporter must be imported and declared outside of the config
 <br>and included in the **onPrepare** section.
 <br>The *createRun()* method is called for creating run in the **afterLaunch** section of the config file,<br>with the first parameter being your corresponding TestRail project ID
 <br>and the second parameter being the suite ID in which you want to put the newly created run.
@@ -36,6 +36,19 @@ exports.config = {
 }
 
 ```
+
+You can also add a parameter if you don't want to send results to TestRail every time.
+<br>In the config file, add:
+```javascript
+params: {
+  sendResultsToTestRail: true,
+},
+```
+This enables sending results by default, and if you want, you can disable it by running Protractor like this:
+```javascript
+protractor conf --params.sendResultsToTestRail=false
+```
+You can also invert the values, if you don't want to send results by default (sendResultsToTestRail: false).
 
 ## Example - tests
 The Case ID from TestRail must be added to the start of each *it()* description, <br>and separated from the test name by a colon - ":".

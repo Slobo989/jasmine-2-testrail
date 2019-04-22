@@ -34,7 +34,9 @@ class Reporter extends JasmineConsoleReporter {
     }).then((r) => {
       console.log('Created new test run: ' + now.toLocaleString(['en-GB'], options))
       api.addResultsForCases(r.id, { results: this.results })
-        .then(console.log('Added test results'))
+        .then(() => {
+          console.log('Added test results')
+        })
         .catch(error => { (error && error.message) ? console.log(error.message) : console.log(error); })
     }).catch(error => { (error && error.message) ? console.log(error.message) : console.log(error);
     })
