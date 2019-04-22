@@ -1,8 +1,8 @@
 {
   "_from": "jasmine-2-testrail",
-  "_id": "jasmine-2-testrail@1.0.2",
+  "_id": "jasmine-2-testrail@1.0.10",
   "_inBundle": false,
-  "_integrity": "sha512-QAwhokckU1pS8EeFxfchaSvcb5k8M50SRtzRahpAKZWamSGuW/S2/oxt1+qJ/aFotVxwjaB7P+Bsvx14zY6tJA==",
+  "_integrity": "sha512-x8cbovK68EJGR17pwN3fvDenLagKAfvrjOleEXIhe4jc9Fz8TMZ59naeveWlhaHnE6CC1Oj7ybYoPUx44reXdg==",
   "_location": "/jasmine-2-testrail",
   "_phantomChildren": {},
   "_requested": {
@@ -19,10 +19,12 @@
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/jasmine-2-testrail/-/jasmine-2-testrail-1.0.2.tgz",
-  "_shasum": "dbb7dde2d1cc1bd0001d181b4c7a09395853e2b1",
+  "_resolved": "https://registry.npmjs.org/jasmine-2-testrail/-/jasmine-2-testrail-1.0.10.tgz",
+  "_shasum": "0bd86ee6eeba0bc21ed0b246c4ac89bacff4c201",
   "_spec": "jasmine-2-testrail",
-  "_where": "D:\\New folder",
+  "bugs": {
+    "url": "https://github.com/Slobo989/jasmine-2-testrail/issues"
+  },
   "bundleDependencies": false,
   "contributors": [
     {
@@ -39,11 +41,17 @@
   },
   "deprecated": false,
   "description": "Jasmine based reporter for creating new run and sending results to TestRail",
+  "devDependencies": {
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  },
   "files": [
     "jasmine-2-testrail.js",
     "testrail-credentials.json",
     "LICENSE"
   ],
+  "homepage": "https://github.com/Slobo989/jasmine-2-testrail#readme",
   "keywords": [
     "testrail",
     "jasmine",
@@ -58,8 +66,12 @@
   "license": "MIT",
   "main": "jasmine-2-testrail.js",
   "name": "jasmine-2-testrail",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Slobo989/jasmine-2-testrail.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.0.5"
+  "version": "1.0.10"
 }

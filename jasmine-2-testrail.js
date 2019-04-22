@@ -37,9 +37,9 @@ class Reporter extends JasmineConsoleReporter {
         .then(() => {
           console.log('Added test results')
         })
-        .catch(error => { (error && error.message) ? console.log(error.message) : console.log(error); })
-    }).catch(error => { (error && error.message) ? console.log(error.message) : console.log(error);
-    })
+        .catch((error) => { console.log(error.message || error) })
+    }).catch((error) => { console.log(error.message || error) }
+    )
   }
 
   specDone(spec) {
