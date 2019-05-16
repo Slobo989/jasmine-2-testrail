@@ -38,7 +38,8 @@
   "dependencies": {
     "jasmine": ">=3.0.0",
     "jasmine-console-reporter": "^3.1.0",
-    "testrail": "github:dlenroc/node-testrail-api"
+    "testrail": "github:dlenroc/node-testrail-api",
+    "dotenv": "8.0.0"
   },
   "deprecated": false,
   "description": "Jasmine based reporter for creating new run and sending results to TestRail",
@@ -74,5 +75,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.1.0"
+  "version": "1.2.0"
 }
