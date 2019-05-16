@@ -84,16 +84,14 @@ describe('Login Page', () => {
 **Note:** The Case ID is a unique and permanent ID of every test case (e.g. C125),
 <br>and shoudn't be confused with a Test Case ID, which is assigned to a test case<br> when a new run is created (e.g. T325).
 
-## Example - **testrail-credentials.json**
+## Example - **.env**
 This file needs to be created in the root directory of the project.
 <br> It must contain the URL of your TestRail, username (email address) and password (or API key).
 <br> This file needs to have all 3 parameters correctly filled.
 ```javascript
-{
-  "networkURL": "https://<YourProjectURL>.testrail.io",
-  "username": "email address",
-  "password": "password or API key"
-}
+NETWORK_URL = https://<YourProjectURL>.testrail.io
+USERNAME = email address
+PASSWORD = password or API key
 ```
 ## Enable TestRail API
 In order to use TestRail API, it needs to be enabled by an administrator

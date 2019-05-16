@@ -1,11 +1,16 @@
 const JasmineConsoleReporter = require('jasmine-console-reporter');
 const TestRail = require('testrail');
-const Credentials = require('../../testrail-credentials');
+
+const dotenv = require('dotenv')
+const fs = require('fs')
+
+const envFile = fs.readFileSync('../.env')
+const config = dotenv.parse(envFile)
 
 const api = new TestRail({
-  host: Credentials.networkURL,
-  user: Credentials.username,
-  password: Credentials.password,
+  host: config.NETWORK_URL,
+  user: config.USERNAME,
+  password: config.PASSWORD,
 });
 
 class Reporter extends JasmineConsoleReporter {
