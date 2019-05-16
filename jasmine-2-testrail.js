@@ -16,7 +16,7 @@ class Reporter extends JasmineConsoleReporter {
 
   }
 
-  createRun(projectId, suiteId) {
+  createRun(runName, projectId, suiteId) {
     let now = new Date();
 
     let options = {
@@ -29,10 +29,16 @@ class Reporter extends JasmineConsoleReporter {
       hour12: false,
     }
 
+    let name = now.toLocaleString(['en-GB'], options)
+
+    if(runName){
+      name = runName
+    }
+
     api.addRun(projectId, {
-      suite_id: suiteId, name: now.toLocaleString(['en-GB'], options), include_all: false, case_ids: this.caseids,
+      suite_id: suiteId, name: name, include_all: false, case_ids: this.caseids,
     }).then((r) => {
-      console.log('Created new test run: ' + now.toLocaleString(['en-GB'], options))
+      console.log('Created new test run: ' + name)
       api.addResultsForCases(r.id, { results: this.results })
         .then(() => {
           console.log('Added test results')

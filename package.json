@@ -1,8 +1,8 @@
 {
   "_from": "jasmine-2-testrail",
-  "_id": "jasmine-2-testrail@1.0.10",
+  "_id": "jasmine-2-testrail@1.0.11",
   "_inBundle": false,
-  "_integrity": "sha512-x8cbovK68EJGR17pwN3fvDenLagKAfvrjOleEXIhe4jc9Fz8TMZ59naeveWlhaHnE6CC1Oj7ybYoPUx44reXdg==",
+  "_integrity": "sha512-W1A1BornFcNagplJh0EP3kQwLGTv0LFcToVSDXyYgMsah6LcFV+i5X+qoQ/WwaZ4qyd2ocUOH2l0CpJAJmIoSQ==",
   "_location": "/jasmine-2-testrail",
   "_phantomChildren": {},
   "_requested": {
@@ -19,9 +19,10 @@
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/jasmine-2-testrail/-/jasmine-2-testrail-1.0.10.tgz",
-  "_shasum": "0bd86ee6eeba0bc21ed0b246c4ac89bacff4c201",
+  "_resolved": "https://registry.npmjs.org/jasmine-2-testrail/-/jasmine-2-testrail-1.0.11.tgz",
+  "_shasum": "8010ff0f5a593b0ffd153b6604bf21f2d047e5ac",
   "_spec": "jasmine-2-testrail",
+  "_where": "D:\\Repos\\New folder",
   "bugs": {
     "url": "https://github.com/Slobo989/jasmine-2-testrail/issues"
   },
@@ -73,5 +74,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.0.10"
+  "version": "1.1.0"
 }

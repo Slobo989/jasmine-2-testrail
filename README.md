@@ -50,6 +50,19 @@ protractor conf --params.sendResultsToTestRail=false
 ```
 You can also invert the values, if you don't want to send results by default (sendResultsToTestRail: false).
 
+There is also a parameter for naming a run in TestRail.
+```javascript
+params: {
+  runName: false,
+},
+```
+
+```javascript
+protractor conf --params.runName=TestRun1
+```
+(If you don't specify a run name, it defaults to the current date and time)
+
+
 ## Example - tests
 The Case ID from TestRail must be added to the start of each *it()* description, <br>and separated from the test name by a colon - ":".
 ```javascript
