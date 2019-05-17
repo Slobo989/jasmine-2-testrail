@@ -1,7 +1,7 @@
 [![TestRail v4.1](https://img.shields.io/badge/TestRail%20API-v2-green.svg)](http://docs.gurock.com/testrail-api2/start)
 # Jasmine2TestRail
 
-Module to use [Protractor](https://www.protractortest.org) in conjunction with [TestRail](http://www.gurock.com/testrail/).
+This package allows you to use [Protractor](https://www.protractortest.org) in conjunction with [TestRail](http://www.gurock.com/testrail/).
 
 * It can automatically create a new test run on TestRail.
 * It can automatically send test results to TestRail - after they've been run.
@@ -16,6 +16,7 @@ The Reporter must be imported and declared outside of the config
 <br>and included in the **onPrepare** section.
 <br>The *createRun()* method is called for creating run in the **afterLaunch** section of the config file,<br>with the first parameter being your corresponding TestRail project ID
 <br>and the second parameter being the suite ID in which you want to put the newly created run.
+<br>*(The third parameter is undefined by default, check **Additional parameters** below)*
 ```javascript
 const Reporter = require('jasmine-2-testrail')
 const reporter = new Reporter({
@@ -28,7 +29,7 @@ exports.config = {
 
   afterLaunch: () => {
     // The first parameter is the project ID, and the second is the suite ID
-    reporter.createRun(1, 1)
+    reporter.createRun(1, 1, browser.params.runName)
     // afterLaunch needs to return a promise in order
     // to execute asynchronous code (used the most basic promise)
     return new Promise(() => true)
@@ -36,7 +37,8 @@ exports.config = {
 }
 
 ```
-
+## Additional parameters
+### sendResultsToTestRail
 You can also add a parameter if you don't want to send results to TestRail every time.
 <br>In the config file, add:
 ```javascript
@@ -44,13 +46,23 @@ params: {
   sendResultsToTestRail: true,
 },
 ```
+You also need to add everything in the **afterLaunch** section in an *if* statement, like this:
+```javascript
+afterLaunch: () => {
+    if (browser.params.sendResultsToTestRail) {
+      reporter.createRun(1, 1, browser.params.runName)
+      return new Promise(() => true)
+    }
+  }
+```
 This enables sending results by default, and if you want, you can disable it by running Protractor like this:
 ```javascript
 protractor conf --params.sendResultsToTestRail=false
 ```
 You can also invert the values, if you don't want to send results by default (sendResultsToTestRail: false).
 
-There is also a parameter for naming a run in TestRail.
+### runName
+There is also a parameter you can add for naming a run in TestRail.
 ```javascript
 params: {
   runName: false,
@@ -84,7 +96,7 @@ describe('Login Page', () => {
 **Note:** The Case ID is a unique and permanent ID of every test case (e.g. C125),
 <br>and shoudn't be confused with a Test Case ID, which is assigned to a test case<br> when a new run is created (e.g. T325).
 
-## Example - **.env**
+## Example - **.env** file
 This file needs to be created in the root directory of the project.
 <br> It must contain the URL of your TestRail, username (email address) and password (or API key).
 <br> This file needs to have all 3 parameters correctly filled.

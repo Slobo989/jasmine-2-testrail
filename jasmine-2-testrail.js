@@ -21,7 +21,7 @@ class Reporter extends JasmineConsoleReporter {
 
   }
 
-  createRun(runName, projectId, suiteId) {
+  createRun(projectId, suiteId, runName = false) {
     let now = new Date();
 
     let options = {
