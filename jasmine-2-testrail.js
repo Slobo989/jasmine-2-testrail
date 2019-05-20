@@ -4,7 +4,14 @@ const TestRail = require('testrail');
 const dotenv = require('dotenv')
 const fs = require('fs')
 
-const envFile = fs.readFileSync('../.env')
+let envFile = null
+try {
+  envFile = fs.readFileSync(path.resolve('.env'))
+} catch (error) {
+  console.error('You don\'t have an .env file!\n', error)
+  process.exit(1)
+}
+
 const config = dotenv.parse(envFile)
 
 const api = new TestRail({

@@ -97,7 +97,7 @@ describe('Login Page', () => {
 <br>and shoudn't be confused with a Test Case ID, which is assigned to a test case<br> when a new run is created (e.g. T325).
 
 ## Example - **.env** file
-This file needs to be created in the root directory of the project.
+This file needs to be created in the same directory as the **conf** file.
 <br> It must contain the URL of your TestRail, username (email address) and password (or API key).
 <br> This file needs to have all 3 parameters correctly filled.
 ```javascript
