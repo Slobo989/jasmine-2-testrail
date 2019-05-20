@@ -6,7 +6,7 @@ const fs = require('fs')
 
 let envFile = null
 try {
-  envFile = fs.readFileSync(path.resolve('.env'))
+  envFile = fs.readFileSync('.env')
 } catch (error) {
   console.error('You don\'t have an .env file!\n', error)
   process.exit(1)
